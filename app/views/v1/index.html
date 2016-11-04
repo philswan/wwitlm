@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  What works in the labour market
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+{# {% include "includes/breadcrumbs.html" %} #}
+
+<h1 class="heading-xlarge">What Works in the Labour Market</h1>
+
+<div class="grid-row">
+
+
+
+
+
+  <div class="column-two-thirds">
+
+    <p>What Works in the Labour Market offer labour market evidence base, reflecting strategic priorities, and use this to guide policy development and delivery particularly with an eye to the future regime in Universal Credit.</p>
+
+    <form id="search" class="site-search" action="/search" method="get" role="search">
+    <div class="content">
+      <label for="site-search-text">Search</label>
+      <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
+      <input class="submit" type="submit" value="Search">
+    </div>
+  <input type="hidden" name="show_organisations_filter" value="true">
+</form>
+
+    <p>Search research and findings</p>
+
+    <label class="js-hidden form-label m-b-xs" for="regpay01">If yes, how much of this debt do you pay back each month?</label>
+
+    <div class="u-1/4-lap-and-up">
+      <input class="c-form-input-denote__input form-control" id="regpay01" type="text" name="regpay01" value="">
+    </div>
+
+
+
+  </div>
+</main>
+
+{% endblock %}
