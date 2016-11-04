@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Employment and Support Allowance type - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('2-esa') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          What type of Employment and Support Allowance do you get?
+        </h1>
+
+        <fieldset class="form-group m-b-m">
+
+          <label class="block-label" for="answer1">
+            <input id="answer1" type="radio" name="answers" value="income">
+            Income-related
+          </label>
+
+          <label class="block-label" for="answer2">
+            <input id="answer2" type="radio" name="answers" value="contribution" >
+            Contribution-based
+          </label>
+
+          <label class="block-label" for="answer3" data-target="notice">
+            <input id="answer3" type="radio" name="answers" value="dontknow" >
+            Don&rsquo;t know
+          </label>
+
+          <div class="panel panel-border-wide style1 js-hidden" id="notice">
+
+            <p class="js-hidden">If you don&rsquo;t know, contact <a href='https://www.gov.uk/contact-jobcentre-plus'>Jobcentre Plus</a> to find out what type of Employment and Support Allowance you get.</p>
+
+            <p class="js-visible-block">Contact <a href='https://www.gov.uk/contact-jobcentre-plus'>Jobcentre Plus</a> to find out what type of Employment and Support Allowance you get.</p>
+
+            <p>If you&rsquo;ve had a Budgeting Loan before and your benefits haven&rsquo;t changed, you&rsquo;ll probably be getting income-related Employment and Support Allowance.</p>
+            <p>If you get contribution-based Employment and Support Allowance, you won&rsquo;t be able to get a Budgeting&nbsp;Loan.</p>
+            
+          </div>
+
+        </fieldset>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

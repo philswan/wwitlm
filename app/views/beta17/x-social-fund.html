@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Eligibility - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">You&rsquo;re not eligible for a Budgeting&nbsp;Loan</h1>
+
+      <div class="panel panel-border-wide style1">
+        <p>Based on your answers, you wouldn&rsquo;t get a Budgeting Loan if you applied because:</p>
+        <ul class="list list-bullet">
+          <li>you owe more than &pound;1,500 for Budgeting&nbsp;Loans and Crisis&nbsp;Loans</li>
+        </ul>
+      </div>
+
+      {% include "includes/beta14-not-eligible-general.html" %}
+
+      <p><a href="https://www.gov.uk/" class="button">Finish</a></p>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+    
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

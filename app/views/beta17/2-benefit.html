@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Current benefits - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link for no js version #}
+      <span class="js-hidden"><a href="1-borrow-amount-no-js-2" class="link-back">Back</a></span>
+
+      {# Back link for js version #}
+      <span class="js-visible-inline-block"><a href="1-borrow-amount" class="link-back">Back</a></span>
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          Which of these benefits do you get?
+        </h1>
+
+        <fieldset class="form-group js-error-container">
+
+          <legend class="c-legend c-legend--medium visuallyhidden">Which of these benefits do you or your partner&nbsp;get?</legend>
+
+          <label class="block-label" for="benefit3">
+            <input id="benefit3" type="radio" name="benefit" value="esa" >
+            Employment and Support Allowance
+          </label>
+
+          <label class="block-label" for="benefit4">
+            <input id="benefit4" type="radio" name="benefit" value="jsa" >
+            Jobseeker&rsquo;s Allowance
+          </label>
+
+          <label class="block-label" for="benefit2">
+            <input id="benefit2" type="radio" name="benefit" value="is" >
+            Income Support
+          </label>
+
+          <label class="block-label" for="benefit1">
+            <input id="benefit1" type="radio" name="benefit" value="pc">
+            Pension Credit
+          </label>
+
+          <label class="block-label" for="benefit5">
+            <input id="benefit5" type="radio" name="benefit" value="none" >
+            None of the above
+          </label>
+
+        </fieldset>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

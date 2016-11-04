@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact methods - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('6-contact-address') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          Contact methods
+        </h1>
+
+        <h2 class="heading-medium">How do you want to get the decision about your loan?</h2>
+
+        <fieldset class="form-group js-error-container">
+
+          <legend class="c-legend c-legend--medium visuallyhidden">Which of these benefits do you get?</legend>
+
+          <label class="block-label" for="email" data-target="email-panel">
+            <input id="email" type="radio" name="contact-preference" value="email">
+            Email &nbsp;(fastest method)
+          </label>
+
+          <label class="block-label" for="letter">
+            <input id="letter" type="radio" name="contact-preference" value="letter">
+            Letter
+          </label>
+
+          <label class="block-label" for="email-and-letter" data-target="email-panel">
+            <input id="email-and-letter" type="radio" name="contact-preference" value="email-and-letter">
+            Email and letter
+          </label>
+
+          <div class="panel panel-border-narrow js-hidden m-b-s" id="email-panel">
+            <fieldset>
+              <legend class="m-b-xs"><label for="email-address">Your email address</label></legend>
+              <input type="text" class="form-control" id="email-address" name="email-address" value="">
+            </fieldset>
+          </div>{# / email-panel #}
+
+        </fieldset>
+
+        <h2 class="heading-medium m-b-s">Enter your mobile number if you&rsquo;d like text message&nbsp;updates</h2>
+        <div class="form-group">
+          <fieldset class="m-b-m">
+            <legend class="c-legend c-legend--large form-label-bold"></legend>
+            <input type="text" class="form-control" id="phone" name="phone" value="">
+          </fieldset>
+          <p class="m-b-0">Your number isn&rsquo;t shared &ndash; it&rsquo;s only used for these updates.</p>
+        </div>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

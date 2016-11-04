@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Error - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large m-b-ml">
+        You can&rsquo;t view this page
+      </h1>
+
+      <p>This is because the address doesn&rsquo;t exist.</p>
+
+      <p class="js-visible-block"><a href="javascript:history.back()">Go back a page</a> and try again. If that doesn&rsquo;t work, <a href="0-start-overview">start a new application</a> for a Budgeting Loan.</p>
+
+      <p class="js-hidden">Try again by clicking the back button in the top left corner of your browser. It&rsquo;s usually an arrow pointing left. If that doesn&rsquo;t work, <a href="0-start-overview">start a new application</a> for a Budgeting Loan.</p>
+
+    </div>{# / column-two-thirds #}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

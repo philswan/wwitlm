@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Savings - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('javascript:history.back()') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+        
+        {% if partner %}
+          <h1 class="heading-large m-b-ml">
+            Do you and your partner have total savings of more than £1,000?
+          </h1>
+          {% else %}
+          <h1 class="heading-large m-b-ml">
+            Do you have savings of more than £1,000?
+          </h1>
+        {% endif %}
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <p>Include any money you have at home and in a bank, building society or credit union account. Also include investments like premium bonds and shares.</p>
+
+            <label class="block-label" data-target="savings-amount" for="savings-1">
+              <input id="savings-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="savings-2">
+              <input id="savings-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+          <div class="panel panel-border-narrow js-hidden m-b-0" id="savings-amount">
+
+            <label class="form-label m-b-xs" for="savings-amount-total">
+              <span class="js-hidden">If yes, how much do you have in total?</span>
+              <span class="js-visible-inline">How much do you have in total?</span>
+            </label>
+
+            <div class="u-1/4-lap-and-up">
+              <span class="c-form-input-denote">&pound;</span>
+              <input class="c-form-input-denote__input form-control form-control-1-4" id="savings-amount-total" type="number" name="savings-amount-total" value="">
+            </div>
+
+          </div>{# / panel #}
+
+        </div>{# / form-group #}
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Error - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large m-b-ml">
+        There&rsquo;s been a problem
+      </h1>
+
+      <p>Check your <a href="/cookies/cookie-policy">cookies are enabled</a> and then try again.</p>
+
+      <p><a href="1-borrow-amount" class="button">Try again</a></p>
+
+    </div>{# / column-two-thirds #}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

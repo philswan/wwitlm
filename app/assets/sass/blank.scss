@@ -1,0 +1,130 @@
+// Styles for non gov pages
+
+dl.hypo {
+  background-color: #ffffcc;
+  padding: 20px;
+  padding-bottom: 1px;
+  margin-bottom: 1em;
+
+  dt {
+    font-weight: bold;
+    float: left;
+    clear: both;
+    margin-right: 0.5em;
+  }
+
+  dd {
+    margin-bottom: 1em;
+  }
+
+}
+
+hr {
+  clear: both
+}
+
+.single-column {
+  max-width: 650px !important;
+
+}
+
+// Styles for design review landing page-break-inside: 
+
+$mid-screen: 744px;
+
+.unbranded .index-page * {
+  font-family: sans-serif !important;
+}
+
+.index-page {
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 1em 0;
+  max-width: 650px !important;
+  margin: 0 auto !important;
+  @media screen and (min-width: $mid-screen) {
+    padding-top: 2em;
+  }
+
+  .alert {
+    background-color: #fff2cc;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 1em;
+    @media screen and (min-width: $mid-screen) {
+      font-size: 35px;
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+    @media screen and (min-width: $mid-screen) {
+      margin: 25px 0 23px 0;
+    }
+  }
+
+  h2 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+    @media screen and (min-width: $mid-screen) {
+      font-size: 22px;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    @media screen and (min-width: $mid-screen) {
+      font-size: 18px;
+    }
+  }
+
+  ol li {
+    margin-bottom: 1em;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 12px;
+  }
+
+  li li {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: inline-block;
+    margin-right: 8px;
+
+  a {
+      color: #666;
+    }
+  }
+
+  ol h4 {
+    display: inline-block;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+
+  ol ul {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  ul li {
+    margin-bottom: 0.3em;
+  }
+
+  strong {
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+  }
+
+}

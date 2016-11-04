@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact address - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+            {% if partner %}
+              {{ back.url('5-about-your-partner') }}
+            {% else %}
+              {{ back.url('5-about-you') }}
+          {% endif %}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          Your contact address
+        </h1>
+
+        <fieldset class="form-group u-clearfix m-b-0">
+
+          <div class="form-group">
+
+            <label class="form-label" for="address-building-street">Building and street</label>
+            <input type="text" class="form-control" id="address-building-street" name="address-building-street" value="">
+
+            <label class="form-label visually-hidden" for="address-building-street2">Building and street line 2 (optional)</label>
+            <input type="text" class="form-control" id="address-building-street2" name="address1" value="">
+
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="address-town">Town or city</label>
+            <input type="text" class="form-control" id="address-town" name="address-town" value="">
+          </div>
+
+          <div class="form-group js-error-container m-t-ns">
+            <label class="form-label" for="address-postcode">Postcode</label>
+            <input type="text" class="form-control form-control-1-4" id="address-postcode" name="address-postcode" value="">
+          </div>
+
+        </fieldset>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

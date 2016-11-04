@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  What happens next - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+       <div class="govuk-box-highlight">
+        <h1 class="bold-large m-b-m">Your application has been received</h1>
+        <p><strong class="heading-medium">Your National Insurance number is your reference</strong></p>
+      </div>
+
+      <h2 class="heading-medium">What happens next</h2>
+
+      {# Prototype code for dynamically outputting 12 days time #}
+
+      <script src="/public/javascripts/moment.js"></script>
+      <p>You&rsquo;ll get a decision by email before <span id="date"></span>.</p>
+      <script>
+      document.getElementById("date").innerHTML = moment().add(12, 'days').format('dddd D MMMM');
+      </script>
+
+      {# End of prototype code for dynamically outputting 12 days time #}
+
+{#       <hr>
+
+      <h2 class="heading-small">Contact Jobcentre Plus about your application</h2>
+
+      <p>
+        Telephone: 0345 603 6967<br>
+        Monday to Friday, 8am to 6pm<br>
+        <a href="/call-charges">Find out about call charges</a>
+      </p> #}
+
+      <p><a href="https://www.surveymonkey.co.uk/r/W2THPY3" rel="external">What did you think of this service?</a></p>
+
+      <p><a href="https://www.gov.uk/" class="button">Finish</a></p>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

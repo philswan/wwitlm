@@ -1,0 +1,514 @@
+// Import GOV.UK elements, this will import the frontend toolkit and some base styles.
+// Take a look in _govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at patterns.scss to see which files are imported.
+@import 'patterns';
+
+// If you need to create a page as part of your journey, but without GOV.UK branding
+// See localhost:3000/examples/unbranded/
+.unbranded {
+  background: $white;
+  // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
+  // * {
+  //   font-family: Arial !important;
+  // }
+  // Remove GOV.UK footer styles
+  #footer {
+    border: 0;
+    background: $white;
+  }
+}
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+.u-mt {
+  margin-top: $gutter * 2 !important;
+}
+
+.phase-banner  {
+  @include phase-banner(alpha);
+}
+
+.phase-banner  {
+  @include phase-banner(beta);
+}
+
+//////////////////////////////////////
+// CUSTOM STYLES START HERE
+//////////////////////////////////////
+
+// Non gov styles
+@import 'blank';
+
+// Pagination
+@import 'pagination';
+
+// Utility classes used for nudging spacing
+@import 'utility';
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+
+
+.application-notice, article .application-notice
+{
+  padding-top: 0.1em;
+  padding-right: 0px;
+  padding-bottom: 0.1em;
+  padding-left: 1em;
+}
+
+.help-notice, article .help-notice
+{
+  background-color: transparent;
+  background-image: url("/public/images/icons/icon-important-0976ff4a275422b183be917d4b3ef444.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0px 0.75em;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+}
+
+.help-notice p, .help-notice p, .info-notice, article p + .help-notice, article p + .info-notice
+{
+
+  margin-left: 0.5em;
+  padding-left: 2em;
+  // margin-top: 2em;
+  font-weight: bold;
+}
+
+.list-bullet.list-none {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+a.button-get-started { background-image: url("/public/images/icons/icon-pointer.png"); }
+
+
+.mvp-inline p {   line-height:2.5em; font-weight:bold;  }
+
+.mvp-inline input { line-height:1em; }
+.mvp-inline textarea { line-height:1em; }
+
+
+label + input { margin-top:10px; }
+label + textarea { margin-top:10px; }
+
+.form-control-small { width:30px; }
+
+
+/* big green box */
+
+
+.highlighted-event {
+    background-color: #28a197;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em 1em 2em;
+    margin: 0
+}
+
+.highlighted-event p {
+    margin-bottom: 0px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.highlighted-event em {
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5em;
+    color: #fff
+}
+
+legend {
+  white-space: normal;
+  width: 100%;
+}
+legend span {
+  width: 100%;
+  display: block;
+}
+
+.form-date .form-group label {
+  margin-bottom: -5px;
+}
+.phase-banner .phase-tag {
+  background-color: #f47738;
+}
+
+.styled-select select {
+   width: 168px;
+   padding: 3px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 38px;
+   display: inline-block;
+   background: #fff url("/public/images/down_arrow_select.jpg") no-repeat right;
+   -webkit-appearance: none /* menulist-button */;
+   }
+
+   .styled-select {
+   width: 140px;
+   height: 34px;
+   overflow: hidden;
+   border: 1px solid $border-colour;
+   }
+
+   .form-control.form-wide {
+    width: 100%;
+   }
+
+   .u-input-25 {
+    width: 100% !important;
+
+    @include media(tablet) {
+        width: 50% !important;
+      }
+   }
+.warning {
+  display: block;
+  background-color: #fef7f7;
+  border: 3px solid #af1324;
+  padding: 15px;
+  margin-bottom: 30px
+}
+
+
+// Start page section links
+
+.rough--section-links {
+  margin-top: -5px;
+  @include media(tablet) {
+    margin-top: -15px;
+    margin-bottom: -10px;
+  }
+  ol li {
+    margin-bottom: 14px;
+  }
+}
+
+// Start page hr
+
+hr.rough--section-links-divider {
+  position: relative;
+  top: -10px;
+  margin-bottom: 0;
+  @include media(tablet) {
+    top: -8px;
+    margin-bottom: -12px;
+  }
+}
+
+// £ classes
+
+.c-form-input-denote,
+div.panel .c-form-input-denote {
+    position: absolute;
+    background-color: rgb(222, 224, 226);
+    line-height: 1;
+    margin: 2px 0px 0px 2px;
+    padding: 7px 12px;
+    z-index: 0;
+}
+
+.c-form-input-denote__input {
+    margin: 0;
+    padding-left: 40px;
+    background-color: transparent !important;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+
+.error .c-form-input-denote {
+    background-color: $error-colour;
+    color: $page-colour;
+    padding: 9px 12px;
+}
+
+.error .c-form-input-denote__input {
+  border-width: 4px !important;
+}
+
+// Notices
+
+// Phasing these out
+
+.notice {
+  background-color: red;
+  padding: 13px 15px 1px 15px;
+  margin-top: 20px;
+  @include media(tablet) {
+    margin-top: 25px;
+    padding: 13px 20px 1px 20px;
+  }
+}
+
+.notice.polite {
+  border-color: $light-blue;
+  background-color: mix(white, $light-blue, 86%);
+}
+
+// Ends phasing these out
+
+h1 + .panel {
+  margin-top: 38px;
+}
+
+.panel.style1 {
+  border-color: $light-blue;
+  background-color: mix(white, $light-blue, 90%);
+}
+
+// error summary styles
+
+ul.error-summary-list li {
+  margin-bottom: 10px !important;
+}
+
+ul.error-summary-list li:last-child {
+  margin-bottom: 0!important;
+}
+
+// featured wrapper (used on the prototype listing page)
+
+.featured-wrapper {
+  border: 1px solid #bfc1c3;
+  margin: 15px;
+  padding: 30px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.featured-wrapper:before {
+  content: "LATEST VERSION";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  font-weight: 400;
+  text-transform: none;
+  background: #666;
+  color: white;
+  font-size: 13px;
+  line-height: 1.4285714286;
+}
+
+.button.tertiary {
+  background-color: #fff;
+  border-bottom-color: #fff !important;
+}
+
+// Nested panel on jsa-worked page - hack for now
+
+.panel-border-none {
+  padding-top: 40px;
+  border: none;
+  padding-left: 0;
+}
+
+// Check your answers
+
+.left-col {
+  width: 30%;
+  // min-width: 200px;
+  // max-width: 400px;
+  // background-color: red;
+}
+
+
+.button.text {
+  background: none;
+  border-color: #FFFFFF;
+  color: $link-colour;
+  text-decoration: underline;
+  box-shadow: none;
+  &:hover, &:focus {
+    color: $link-hover-colour;
+  }
+  &:active {
+    top: 0;
+  }
+}
+
+// Alert messages
+
+.alert-default {
+  border-color: $light-blue;
+  background-color: mix(white, $light-blue, 90%);
+}
+
+.alert-warning {
+  border-color: $red;
+  background-color: mix(white, $mellow-red, 90%);
+}
+
+.alert-success {
+  border-color: $turquoise;
+  background-color: mix(white, $turquoise, 90%);
+}
+
+.notice.long .icon {
+  margin-top: 0;
+  top: 0px;
+}
+
+// Potentially look at using flexbox with a fallback so we don’t need to use different classes
+// See http://codepen.io/bootsified/pen/PNMOVg
+
+.padding-small {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.m-b-s {
+  margin-bottom: 12px !important;
+  @include media(tablet) {
+    margin-bottom: 15px !important;
+  }
+}
+
+// Help function
+
+.help-function a {
+  background-color: #FFFFCC;
+  margin-top: 108px;
+  padding: 15px;
+  // color: #FFF;
+  display: block;
+}
+
+// Help function v2 aside stuff
+
+.column-two-thirds {
+  overflow: hidden;
+}
+
+.aside-wrapper {
+  clear: both;
+  @include media(tablet) {
+    clear: none;
+  }
+}
+
+.aside {
+  margin-top: 20px;
+  @include media(tablet) {
+    margin-top: 30px;
+  }
+}
+
+// Right aligned columns
+
+.right-col {
+  text-align: right;
+}
+
+
+// tabs for table on how it works page
+
+.container {
+
+  margin: 0 auto;
+  table {
+    border-top: 1px solid $border-colour;
+    th {
+      padding-top: 40px;
+    }
+  }
+}
+
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  top: 1px;
+}
+
+ul.tabs li {
+  background: $page-colour;
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+  border: 1px solid $page-colour;
+  border-bottom-color: $border-colour;
+  text-decoration: underline;
+  color: $govuk-blue;
+  &:hover {
+    color: $link-hover-colour;
+  }
+}
+
+ul.tabs li.current {
+  color: $text-colour;
+  text-decoration: none;
+  border: 1px solid $border-colour;
+  border-bottom-color: $page-colour; 
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.current {
+  display: inherit;
+}
+
+// Tables
+
+table {
+  th, td {
+    vertical-align: top;
+  }
+}
+
+// Javascript on/off
+
+.js-hidden {
+}
+
+.js-visible-inline,
+.js-visible-inline-block,
+.js-visible-block {
+  display: none !important;
+}
+
+.js-enabled {
+  .js-visible-inline {
+    display: inline !important;
+  }
+  .js-visible-inline-block {
+    display: inline-block !important;
+  }
+  .js-visible-block {
+    display: block !important;
+  }
+}

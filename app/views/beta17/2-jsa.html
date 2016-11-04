@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Jobseeker&rsquo;s Allowance - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('2-benefit') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          How long have you been getting Jobseeker&rsquo;s Allowance?
+        </h1>
+
+        <p>This could include any short breaks in your benefit up to a total of 28 days.</p>
+
+        <fieldset class="form-group">
+
+          <label class="block-label" for="answer1">
+            <input id="answer1" type="radio" name="answers" value="12">
+            More than 12 months
+          </label>
+
+          <label class="block-label" for="answer2">
+            <input id="answer2" type="radio" name="answers" value="6">
+            Between 6 and 12 months
+          </label>
+
+          <label class="block-label" for="answer3">
+            <input id="answer3" type="radio" name="answers" value="3" >
+            Less than 6 months
+          </label>
+
+        </fieldset>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}
