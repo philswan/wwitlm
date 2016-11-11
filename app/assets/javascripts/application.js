@@ -144,19 +144,14 @@ $(document).ready(function(){
 
 })
 
-// How much you can apply for question (in Beta 16 onwards)
+// Show panels in sources
 
-$('form#borrow-amount input').change(function() {
-  var amount;
 
-  if ($('#answer3').prop('checked')) {
-    amount = "812";
-  } else if ($('#answer1').prop('checked')) {
-    amount = "464";
-  } else {
-    amount = "348";
-  }
 
-  $('#amount').text(amount);
 
-});
+
+
+
+
+
+
