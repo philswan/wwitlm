@@ -512,3 +512,25 @@ table {
     display: block !important;
   }
 }
+
+// Search block
+
+.search-block {
+  input[type="search"] {
+    max-width: 600px;
+  }
+  input[type="submit"] {
+    // background-color: red;
+    border: none;
+    text-indent: -999em;
+    background-color: $govuk-blue;
+    background-image: url('/public/images/icons/search-button.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 37px;
+    position: relative;
+    left: -5px;
+    top: -1px;
+  }
+}

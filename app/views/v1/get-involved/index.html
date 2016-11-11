@@ -1,0 +1,61 @@
+{% set section = "get-involved" %}
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Get involved - What works in the labour market
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+<div class="breadcrumbs">
+  <ol role="breadcrumbs" class="group">
+    <li><a href="/v1">What Works in the Labour Market</a></li>
+  </ol>
+</div>
+
+<div class="grid-row">
+
+  <div class="column-two-thirds">
+
+    <h1 class="heading-large">Get involved</h1>
+
+    <form method="post" class="form">
+
+      <h2 class="heading-medium">Share a case study</h2>
+
+      <p>Please send details of your case study below and we&rsquo;ll contact you to get further information.</p>
+
+      <!-- Full name -->
+      <div class="form-group">
+        <label class="form-label" for="full-name">Full name</label>
+        <input type="text" class="form-control" id="full-name">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email address</label>
+        <input type="text" class="form-control" id="email">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="description">Brief description of your case study</label>
+        <textarea class="form-control" id="description" cols="30" rows="10">
+        </textarea>
+      </div>
+
+      <div class="form-group">
+        <a href="#" class="button">Submit</a>
+      </div>
+
+    </form>
+
+  </div>{# /column-two-thirds #}
+
+</div>{# /grid-row #}
+
+</main>
+
+{% endblock %}

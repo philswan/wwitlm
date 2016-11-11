@@ -2,13 +2,12 @@
   <div class="content">
     <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
     <nav id="proposition-menu">
-      <a href="/" id="proposition-name">{% if serviceName %} {{ serviceName }} {% endif %}</a>
+      <a href="/v1" id="proposition-name">{% if serviceName %} {{ serviceName }} {% endif %}</a>
       <ul id="proposition-links">
-{#         <li><a href="url-to-page-1" class="active">Customer groups</a></li>
-        <li><a href="url-to-page-2">Intervention types</a></li> #}
-        <li><a href="url-to-page-2">Research and findings</a></li>
-        <li><a href="url-to-page-2">Get involved</a></li>
-        <li><a href="url-to-page-2">About us</a></li>
+        <li><a href="/v1/findings" {% if section == "findings" %}class="active"{% endif %}>Research and findings</a></li>
+        <li><a href="/v1/get-involved" {% if section == "get-involved" %}class="active"{% endif %}>Get involved</a></li>
+        <li><a href="/v1/policy-context" {% if section == "policy-context" %}class="active"{% endif %}>Policy context</a></li>
+        <li><a href="/v1/about-us" {% if section == "about-us" %}class="active"{% endif %}>About us</a></li>
       </ul>
     </nav>
   </div>

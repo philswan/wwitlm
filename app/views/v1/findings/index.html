@@ -1,0 +1,55 @@
+{% set section = "findings" %}
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Findings - What works in the labour market
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+<div class="breadcrumbs">
+  <ol role="breadcrumbs" class="group">
+    <li><a href="/v1">What Works in the Labour Market</a></li>
+  </ol>
+</div>
+
+<div class="grid-row">
+
+  <div class="column-two-thirds">
+
+    <h1 class="heading-large">Research and findings</h1>
+
+    <div class="search-block">
+
+      <form id="search" class="site-search" action="/search" method="get" role="search">
+        <div class="content">
+          <label for="site-search-text" class="label">Search for labour market research and findings</label>
+          <input type="search" name="q" id="site-search-text" title="Search" class="c-form-input-denote__input form-control">
+          <input class="submit" type="submit" value="Search">
+        </div>
+      </form>
+
+    </div>{# /search-block #}
+
+  </div>{# /column-two-thirds #}
+
+</div>{# /grid-row #}
+
+<div class="grid-row">
+
+  <div class="column-one-third">
+
+    wefwef
+
+
+  </div>{# /column-one-third #}
+
+</div>{# /grid-row #}
+
+</main>
+
+{% endblock %}

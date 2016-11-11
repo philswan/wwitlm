@@ -1,0 +1,46 @@
+{% set section = "about-us" %}
+{% extends "layout.html" %}
+
+{% block page_title %}
+  About us - What works in the labour market
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+<div class="breadcrumbs">
+  <ol role="breadcrumbs" class="group">
+    <li><a href="/v1">What Works in the Labour Market</a></li>
+  </ol>
+</div>
+
+<div class="grid-row">
+
+  <div class="column-two-thirds">
+
+    <h1 class="heading-large">About us</h1>
+
+    <p>DWP wants to make it easier for policy and operational decision makers to use evidence in designing and delivering services.</p>
+
+    <p>We are a small team of analytical and policy staff in DWP working with internal and external experts to understand labour market evidence. </p>
+
+    <p>To make it easier for decision makers to use evidence, on this site we are:</p>
+
+    <ul class="list list-bullet">
+      <li>summarising evidence on active labour market policies</li>
+      <li>sharing this in user-friendly formats and maintaining and updating this on an on-going basis</li>
+      <li>maintaining a research library of the most relevant reports</li>
+      <li>mapping live external research/trials to make these more visible to all</li>
+      <li>holding case studies showing examples of effective local practice</li>
+    </ul>
+
+  </div>{# /column-two-thirds #}
+
+</div>{# /grid-row #}
+
+</main>
+
+{% endblock %}

@@ -1,3 +1,4 @@
+{% set section = "home" %}
 {% extends "layout.html" %}
 
 {% block page_title %}
@@ -12,38 +13,79 @@
 
 {# {% include "includes/breadcrumbs.html" %} #}
 
-<h1 class="heading-xlarge">What Works in the Labour Market</h1>
+  <h1 class="heading-xlarge" class="m-b-s">What Works in the Labour Market</h1>
 
-<div class="grid-row">
+  <div class="grid-row">
+
+    <div class="column-one-half">
+
+      <form id="search" class="site-search" action="/search" method="get" role="search">
+
+        <div class="search-block">
+          <p><label for="site-search-text" class="label">Search for labour market research and findings</label></p>
+          <input type="search" id="site-search-text" title="Search" class="form-control" placeholder="Search">
+          <input class="submit" type="submit" value="Search">
+        </div>{# /search-block #}
+
+      </form>
+
+    </div>{# /column-one-half #}
+
+  </div>{# /grid-row #}
+
+  <hr>
+
+  <div class="grid-row">
+
+    <div class="column-one-half">
+
+      <h2 class="heading-medium">Customer groups</h2>
+
+      <ul class="list">
+        <li><a href="#">Black and Minority Ethnic (BME)</a></li>
+        <li><a href="#">Day one</a></li>
+        <li><a href="#">Disadvantaged groups</a></li>
+        <li><a href="/v1/findings/health-and-disability">Health and disability</a></li>
+        <li><a href="#">In work</a></li>
+        <li><a href="#">Long term unemployed</a></li>
+        <li><a href="#">Older workers</a></li>
+        <li><a href="#">Parents/Carers/Partners</a></li>
+        <li><a href="#">Self employment</a></li>
+        <li><a href="#">Young people</a></li>
+      </ul>
+
+    </div>{# /column-one-half #}
+
+    <div class="column-one-half">
+
+      <h2 class="heading-medium">Types of help</h2>
+
+      <ul class="list">
+        <li><a href="#">Basic skills</a></li>
+        <li><a href="#">Childcare</a></li>
+        <li><a href="#">Employability training</a></li>
+        <li><a href="#">Employer engagement</a></li>
+        <li><a href="#">English for speakers of other languages (ESOL)</a></li>
+        <li><a href="#">Job search skills</a></li>
+        <li><a href="#">Other financial help</a></li>
+        <li><a href="#">Other specialist intervention</a></li>
+        <li><a href="#">Partnerships and local service integration</a></li>
+        <li><a href="#">Retention and sustainment</a></li>
+        <li><a href="#">Specialist health intervention</a></li>
+        <li><a href="#">Supported employment</a></li>
+        <li><a href="#">Supported progression</a></li>
+        <li><a href="#">Transport</a></li>
+        <li><a href="#">Vocational training</a></li>
+        <li><a href="#">Wage subsidies</a></li>
+        <li><a href="#">Work experience</a></li>
+      </ul>
+
+    </div>{# /column-one-half #}
 
 
+  </div>{# /grid-row #}
 
 
-
-  <div class="column-two-thirds">
-
-    <p>What Works in the Labour Market offer labour market evidence base, reflecting strategic priorities, and use this to guide policy development and delivery particularly with an eye to the future regime in Universal Credit.</p>
-
-    <form id="search" class="site-search" action="/search" method="get" role="search">
-    <div class="content">
-      <label for="site-search-text">Search</label>
-      <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
-      <input class="submit" type="submit" value="Search">
-    </div>
-  <input type="hidden" name="show_organisations_filter" value="true">
-</form>
-
-    <p>Search research and findings</p>
-
-    <label class="js-hidden form-label m-b-xs" for="regpay01">If yes, how much of this debt do you pay back each month?</label>
-
-    <div class="u-1/4-lap-and-up">
-      <input class="c-form-input-denote__input form-control" id="regpay01" type="text" name="regpay01" value="">
-    </div>
-
-
-
-  </div>
 </main>
 
 {% endblock %}
