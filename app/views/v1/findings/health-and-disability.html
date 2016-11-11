@@ -31,6 +31,8 @@
         Evidence strength: No supporting evidence
       </p>
 
+      <span class="tooltip" title="This is my span's tooltip message!">Some text</span>
+
   {#     <p class="font-xsmall" >Last updated: 11 November 2016</p> #}
 
       <hr>
@@ -79,13 +81,47 @@
         <li>financial situation</li>
       </ul>
 
-      <p><sup><a href="#fn:1">1</a>, <a href="#fn:2">2</a>, <a href="#fn:11">11</a></sup></p>
+      <p>
+        <sup>
+          <span class="tooltip">
+            <a href="#fn:1">1</a>,
+            {% include "v1/findings/tooltips/1.html" %}
+          </span>
+          <span class="tooltip">
+            <a href="#fn:2">2</a>,
+            {% include "v1/findings/tooltips/2.html" %}
+          </span>
+          <span class="tooltip">
+            <a href="#fn:11">11</a>,
+            {% include "v1/findings/tooltips/11.html" %}
+          </span>
+        </sup>
+      </p>
 
       <h2 id="part2" class="heading-large">Interventions that may work</h2>
 
       <h3 class="heading-medium">Moving into employment</h3>
 
-      <p>There are examples of financial incentives paid to individuals helping disabled people into employment, although they may only work for people who are already close to the labour market. Overall though the evidence is patchy <sup><a href="#fn:3">3</a>, <a href="#fn:4">4</a>, <a href="#fn:5">5</a>, <a href="#fn:6">6</a></sup>.</p>
+      <p>There are examples of financial incentives paid to individuals helping disabled people into employment, although they may only work for people who are already close to the labour market. Overall though the evidence is patchy
+        <sup>
+          <span class="tooltip">
+            <a href="#fn:3">3</a>,
+            {% include "v1/findings/tooltips/3.html" %}
+          </span>
+          <span class="tooltip">
+            <a href="#fn:4">4</a>,
+            {% include "v1/findings/tooltips/4.html" %}
+          </span>
+          <span class="tooltip">
+            <a href="#fn:5">5</a>,
+            {% include "v1/findings/tooltips/5.html" %}
+          </span>
+          <span class="tooltip">
+            <a href="#fn:6">6</a>.
+            {% include "v1/findings/tooltips/6.html" %}
+          </span>
+        </sup>
+      </p>
 
       <p>Financial incentives paid to an employer can work if generous enough, but there is risk of deadweight and stigma. There is mixed evidence around how long the effect of these incentives lasts, with some showing it drops off after one year <sup><a href="#fn:3">3</a>, <a href="#fn:7">7</a>, <a href="#fn:8">8</a></sup>.</p>
 

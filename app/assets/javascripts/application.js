@@ -146,9 +146,31 @@ $(document).ready(function(){
 
 // Show panels in sources
 
+$(document).ready(function(){
+  
+  $('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
 
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
 
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  })
 
+})
+
+// Tooltips
+
+$(document).ready(function() {
+
+  var $allTooltips = $(".tooltip");
+  
+  $allTooltips.hover(function() {
+    $(this).toggleClass("pop-up");
+  });
+
+});
 
 
 
