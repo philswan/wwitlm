@@ -172,6 +172,86 @@ $(document).ready(function() {
 
 });
 
+// Going up
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+
+// $('.testing').attr('href', function() {
+//   $(this).attr('href')+'?q1=iPodTouch&x=79&y=20';
+// });
+
+$(document).ready(function() {
+
+  var $allBackupLinks = $(".back-up a");
+
+  $allBackupLinks.click(function(){
+    if (getQueryVariable("cite")) {
+
+      $cite = getQueryVariable("cite");
+      $url = $(this).attr("href")+'-'+$cite;
+      $(this).attr("href", $url);
+      $clicked = true;
+
+      // $('.testing').attr('href')+'hello';
+      // $('.testing').attr('href')+'?q1=iPodTouch&x=79&y=20';
+    };
+
+  });
+
+  // if (getQueryVariable("cite")) {
+  //   $cite = getQueryVariable("cite");
+  //   $url = ($(".back-up a").attr("href")+'-'+$cite);
+  //   $(".back-up a").attr("href", $url);
+  //   // $('.testing').attr('href')+'hello';
+  //   // $('.testing').attr('href')+'?q1=iPodTouch&x=79&y=20';
+  // };
+
+});
+
+// $(document).ready(function() {
+
+//   // var $testing = $(".testing");
+//   // $allTooltips.hover(function() {
+//   //   $(this).attr('href')+'?q1=iPodTouch&x=79&y=20';
+//   // });
+
+
+//   $(".testing").attr("href", "http://www.w3schools.com/jquery");
+
+// };
+
+// $(document).ready(function(){
+
+//         $(".testing").attr("href", "http://www.w3schools.com/jquery");
+
+// });
+
+// alert(getQueryVariable("cite"));
+
+// $(document).ready(function() {
+
+
+
+//   $('.testing').attr('href')+'?q1=iPodTouch&x=79&y=20';
+
+// });
+
+// $( "a" ).on( "click", function() {
+//   var $cite = getQueryVariable("cite");
+//   // alert ($cite);
+
+  
+
+
+// });
 
 
 
