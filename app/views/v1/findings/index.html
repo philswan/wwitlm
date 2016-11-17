@@ -11,44 +11,222 @@
 
 {% include "includes/alpha-banner.html" %}
 
-<div class="breadcrumbs">
-  <ol role="breadcrumbs" class="group">
-    <li><a href="/v1">What Works in the Labour Market</a></li>
-  </ol>
-</div>
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/v1">What Works in the Labour Market</a></li>
+    </ol>
+  </div>
 
-<div class="grid-row">
+  <h1 class="heading-xlarge" class="m-b-s">Research and findings</h1>
+  <p class="lede m-b-l">Search for labour market research and findings</p>
 
-  <div class="column-two-thirds">
 
-    <h1 class="heading-large">Research and findings</h1>
+  <div class="grid-row m-t-l">
 
-    <div class="search-block">
+    <div class="column-one-third">
 
-      <form id="search" class="site-search" action="/search" method="get" role="search">
-        <div class="content">
-          <label for="site-search-text" class="label">Search for labour market research and findings</label>
-          <input type="search" name="q" id="site-search-text" title="Search" class="c-form-input-denote__input form-control">
+      <div class="search-block">
+          <input type="search" title="Search" class="form-control" placeholder="Search">
           <input class="submit" type="submit" value="Search">
+        </div>{# /search-block #}
+      <div class="govuk-option-select js-collapsible">
+        <h2>Customer groups <span class="toggle"></span></h2>
+          <div class="options-container" id="organisations">
+            <label for="bme">
+              <input name="bme" id="bme" type="checkbox"> BME
+            </label>
+            <label for="day-one">
+              <input name="day-one" id="day-one" type="checkbox"> Day one
+            </label>
+            <label for="disadvantaged-groups">
+              <input name="disadvantaged-groups" id="disadvantaged-groups" type="checkbox"> Disadvantaged groups
+            </label>
+            <label for="health-and-disability">
+              <input name="health-and-disability" id="health-and-disability" type="checkbox"> Health and disability
+            </label>
+            <label for="in-work">
+              <input name="in-work" id="in-work" type="checkbox"> In work
+            </label>
+            <label for="long-term-unemployed">
+              <input name="long-term-unemployed" id="long-term-unemployed" type="checkbox"> Long term unemployed
+            </label>
+            <label for="older-workers">
+              <input name="older-workers" id="older-workers" type="checkbox"> Older workers
+            </label>
+            <label for="parents">
+              <input name="parents" id="parents" type="checkbox"> Parents/Carers/Partners
+            </label>
+            <label for="self-employed">
+              <input name="self-employment" id="self-employment" type="checkbox"> Self employment
+            </label>
+            <label for="young-people">
+              <input name="young-people" id="young-people" type="checkbox"> Young people
+            </label>
         </div>
-      </form>
+      </div>
+    </div>{# /column-one-quarter #}
 
-    </div>{# /search-block #}
+    <div class="column-two-thirds"><div style="background-color: ">
 
-  </div>{# /column-two-thirds #}
+      <div class="nav-tabbed">
+        <ul>
+          <li class="current"><span>Overviews <i>(27)</i></span></li>
+          <li><a href="#"><span>Research</span> <i>(367)</i></a></li>
+          <li><a href="#"><span>Case studies</span> <i>(42)</i></a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>{# /nav-tabbed #}
 
-</div>{# /grid-row #}
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Basic skills</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
 
-<div class="grid-row">
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Black and Minority Ethnic (BME)</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
 
-  <div class="column-one-third">
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Childcare</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
 
-    wefwef
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Day one</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Disadvantaged groups</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Employability training</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Employer engagement</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">English for speakers of other languages (ESOL)</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Health and disability</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">In work</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Job search skills</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <div class="listing font-xsmall">
+      <h3 class="heading-medium"><a href="#">Long term unemployed</a></h3>
+      <small class="secondary">Last updated 10 October 2016</small>
+      <h4 class="heading-small">What is it?</h4>
+      <p>Wage subsidies are payments made to employers or employees and incentivise hiring.</p>
+      <h4 class="heading-small">Why should this work?</h4>
+      <p>Subsidising wages increases employer demand for the subsidised worker, i.e. the unemployed. In addition the unemployed (especially young &amp; LTU) may be perceived as a risky choice for an employer; the wage subsidy compensates the employer for this risk.</p>
+    </div>{# /listing #}
+
+    <footer>
+      <nav class="pagination" role="navigation" aria-label="Pagination">
+        <ul class="group">
+
+          <li class="next">
+            <a href="/v1/policy-context/rationale-for-labour-market-interventions" rel="next" title="Navigate to next part">
+              <span class="pagination-label">Next</span> <span class="pagination-part-title"> 2 of 3</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </footer>
+      
+    </div></div>{# /column-one-half #}
+
+    
+
+{# <h3 class="heading-medium"><a href="#">Employer engagement</a></h3>
+<h3 class="heading-medium"><a href="#">English for speakers of other languages (ESOL)</a></h3>
+<h3 class="heading-medium"><a href="#">Health and disability</a></h3>
+<h3 class="heading-medium"><a href="#">In work</a></h3>
+<h3 class="heading-medium"><a href="#">Job search skills</a></h3>
+<h3 class="heading-medium"><a href="#">Long term unemployed</a></h3>
+<h3 class="heading-medium"><a href="#">Older workers</a></h3>
+<h3 class="heading-medium"><a href="#">Other financial help</a></h3>
+<h3 class="heading-medium"><a href="#">Other specialist intervention</a></h3>
+<h3 class="heading-medium"><a href="#">Parents/Carers/Partners</a></h3>
+<h3 class="heading-medium"><a href="#">Partnerships and local service integration</a></h3>
+<h3 class="heading-medium"><a href="#">Retention and sustainment</a></h3>
+<h3 class="heading-medium"><a href="#">Self employment</a></h3>
+<h3 class="heading-medium"><a href="#">Specialist health intervention</a></h3>
+<h3 class="heading-medium"><a href="#">Supported employment</a></h3>
+<h3 class="heading-medium"><a href="#">Supported progression</a></h3>
+<h3 class="heading-medium"><a href="#">Transport</a></h3>
+<h3 class="heading-medium"><a href="#">Vocational training</a></h3>
+<h3 class="heading-medium"><a href="#">Wage subsidies</a></h3>
+<h3 class="heading-medium"><a href="#">Work experience</a></h3>
+<h3 class="heading-medium"><a href="#">Young people</a></h3> #}
 
 
-  </div>{# /column-one-third #}
-
-</div>{# /grid-row #}
+  </div>{# /grid-row #}
 
 </main>
 

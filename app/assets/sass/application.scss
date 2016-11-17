@@ -20,6 +20,7 @@
   }
 }
 
+
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
@@ -40,10 +41,6 @@
 
 .u-mt {
   margin-top: $gutter * 2 !important;
-}
-
-.phase-banner  {
-  @include phase-banner(alpha);
 }
 
 .phase-banner  {
@@ -105,7 +102,7 @@
 a.button-get-started { background-image: url("/public/images/icons/icon-pointer.png"); }
 
 
-.mvp-inline p {   line-height:2.5em; font-weight:bold;  }
+.mvp-inline p { line-height:2.5em; font-weight:bold;  }
 
 .mvp-inline input { line-height:1em; }
 .mvp-inline textarea { line-height:1em; }
@@ -157,7 +154,7 @@ legend span {
   margin-bottom: -5px;
 }
 .phase-banner .phase-tag {
-  background-color: #f47738;
+  background-color: $alpha-colour;
 }
 
 .styled-select select {
@@ -180,7 +177,7 @@ legend span {
    border: 1px solid $border-colour;
    }
 
-   .form-control.form-wide {
+   .form-control.wide {
     width: 100%;
    }
 
@@ -432,54 +429,85 @@ ul.error-summary-list li:last-child {
 }
 
 
-// tabs for table on how it works page
+// Tabs
 
-.container {
+.nav-tabbed {
+  border-bottom: 1px solid $border-colour;
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+  }
+}
 
-  margin: 0 auto;
-  table {
-    border-top: 1px solid $border-colour;
-    th {
-      padding-top: 40px;
+.nav-tabbed ul {
+  display: block;
+  li {
+    background: $page-colour;
+    display: inline-block;
+    // cursor: pointer;
+    border: 1px solid $panel-colour;
+    background-color: $panel-colour;
+    color: $govuk-blue;
+    @include copy-16;
+    font-weight: bold;
+    padding: 0;
+    @include media(tablet) {
+      @include copy-19;
+      font-weight: bold;
+    }
+    a {
+      display: inline-block;
+      padding: 10px;
+      @include media(tablet) {
+        padding: 12px 15px 6px 15px;
+      }
+      &:hover {
+      color: $link-hover-colour;
+      }
+    }
+    i {
+      display: none;
+      // @include media(desktop) {
+      //   display: inline;
+      //   font-weight: bold;
+      //   font-style: normal;
+      // }
     }
   }
 }
 
-ul.tabs {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
-  top: 1px;
+::-webkit-input-placeholder {
+  color: $grey-1;
 }
 
-ul.tabs li {
-  background: $page-colour;
-  display: inline-block;
-  padding: 10px 10px;
-  cursor: pointer;
-  border: 1px solid $page-colour;
-  border-bottom-color: $border-colour;
-  text-decoration: underline;
-  color: $govuk-blue;
-  &:hover {
-    color: $link-hover-colour;
-  }
+:-moz-placeholder { /* Firefox 18- */
+  color: $grey-1;
 }
 
-ul.tabs li.current {
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $grey-1;
+}
+
+:-ms-input-placeholder {  
+  color: $grey-1; 
+}
+
+.nav-tabbed ul li.current {
   color: $text-colour;
   text-decoration: none;
   border: 1px solid $border-colour;
-  border-bottom-color: $page-colour; 
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.current {
-  display: inherit;
+  background-color: $page-colour;
+  border-bottom: 1px solid $page-colour;
+  position: relative;
+  bottom: -1px;
+  padding: 10px;
+  @include media(tablet) {
+      padding: 12px 15px 14px 15px;
+    }
+  span {
+    position: relative;
+    top: -1px;
+  }
 }
 
 // Tables
@@ -516,8 +544,12 @@ table {
 // Search block
 
 .search-block {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+
   input[type="search"] {
-    max-width: 600px;
+    width: 100%;
   }
   input[type="submit"] {
     // background-color: red;
@@ -529,10 +561,17 @@ table {
     background-repeat: no-repeat;
     width: 36px;
     height: 37px;
-    position: relative;
-    left: -5px;
-    top: -1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // left: -5px;
+    // top: -1px;
   }
+
+
+
+
+
 }
 
 .heading-mlarge {
@@ -615,7 +654,6 @@ dl.sources {
       display: block;
     }
   }
-
 }
 
 
@@ -625,7 +663,7 @@ dl.sources {
   position: relative;
 
   .tooltip-content {
-    background-color: $grey-3;
+    background-color: mix(white, $light-blue, 90%);
     position: absolute;
     top: 30px;
     left: -45px;
@@ -649,7 +687,7 @@ dl.sources {
     height: 0;
     border-style: solid;
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent $grey-3 transparent;
+    border-color: transparent transparent mix(white, $light-blue, 90%) transparent;
   }
 }
 
@@ -663,3 +701,61 @@ dl.sources {
 .overflow-visible {
   overflow: visible;
 }
+
+.govuk-option-select {
+  border: 5px solid $grey-3;
+  // background-color: red;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  label {
+    @include copy-16;
+  }
+
+  h2 {
+    background-color: $grey-3;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+    position: relative;
+  }
+
+  label {
+    display: block;
+  }
+}
+
+.listing {
+  border-bottom: 1px solid $border-colour;
+  margin-bottom: 20px;
+  h3 {
+    margin-top: 0 !important;
+  }
+}
+
+.toggle {
+  background-image: url(/public/images/icons/toggle-sprite.png);
+  background-position-x:-12px;
+  background-position-y:0px;
+  background-repeat: no-repeat;
+  display:inline-block;
+  width:12px;
+  height: 12px;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+.secondary {
+  display: block;
+  color: $grey-1;
+  @include copy-14;
+  margin-top: -15px;
+}
+
+h1 + .lede {
+  margin-top: -1em;
+}
+
