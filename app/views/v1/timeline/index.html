@@ -1,0 +1,67 @@
+{% set section = "findings" %}
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Findings - What works in the labour market
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/v1">What Works in the Labour Market</a></li>
+    </ol>
+  </div>
+
+  <h1 class="heading-xlarge" class="m-b-s">A history of the labour market</h1>
+  <p class="lede m-b-l">How the market has evolved and what&rsquo;s been learned</p>
+
+{#   {% var items = [{ title: "foo", id: 1 }, { title: "bar", id: 2}]; %}
+
+  <h1>Posts</h1>
+  <ul>
+  {% for item in items %}
+    <li>{{ item.title }}</li>
+  {% else %}
+    <li>This would display if the 'item' collection were empty</li>
+  {% endfor %}
+  </ul> #}
+
+
+{#    {{ food = "cheese" }}
+
+   {% set food = "cheese" %} #}
+
+{#    {{ food }} #}
+
+{#    {% set food = "cheese" %} #}
+
+{#   {% set food = 
+    'ketchup': '5 tbsp',
+    'mustard': '1 tbsp',
+    'pickle': '0 tbsp'
+ %}
+ #}
+{#  {% set food: {
+    'ketchup': '5 tbsp',
+    'mustard': '1 tbsp',
+    'pickle': '0 tbsp' }%}
+
+  {% for ingredient, amount in food %}
+    Use {{ amount }} of {{ ingredient }}
+  {% endfor %} #}
+
+  <ul class="list list-bullet">
+{% for href, caption in [('index.html', 'Index'), ('about.html', 'About'),
+                         ('downloads.html', 'Downloads')] %}
+    <li><a href="{{ href }}">{{ caption }}</a></li>
+{% endfor %}
+</ul>
+
+</main>
+
+{% endblock %}
