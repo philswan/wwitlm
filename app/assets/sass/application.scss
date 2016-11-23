@@ -73,7 +73,9 @@ a:visited {
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 
-
+.clear {
+  clear: both;
+}
 
 .application-notice, article .application-notice
 {
@@ -811,3 +813,86 @@ img.image {
   width: 100%;
   height: auto;
 }
+
+// Timeline
+
+.timeline {
+  border-left: 5px solid $turquoise;
+  overflow: visible;
+  position: relative;
+  h2 {
+    background-color: $page-colour;
+    z-index: 9999;
+    position: absolute;
+    padding: 20px 5px;
+    position: relative;
+    left: -15px;
+    clear: both;
+    margin-top: 0;
+
+  }
+  h3 {
+    float: left;
+    width: 20%;
+    margin-top: 0;
+    clear: both;
+    position: relative;
+    font-weight: bold;
+    @include media(tablet) {
+      width: 10%;
+    }
+    .line {
+      background-color: $turquoise;
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      margin-right: 10px;
+      top: -5px;
+      position: relative;
+      @include media(tablet) {
+        width: 20px;
+      }
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  details {
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
+  summary {
+    margin: 0;
+  }
+
+  .timeline-event {
+    float: right;
+    margin-bottom: 30px;
+    width: 88%;
+    @include media(tablet) {
+      margin-bottom: 40px;
+    }
+    p {
+      @include media(tablet) {
+        padding-right: 20%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

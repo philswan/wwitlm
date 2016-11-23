@@ -18,46 +18,105 @@
   </div>
 
   <h1 class="heading-xlarge" class="m-b-s">A history of the labour market</h1>
+
   <p class="lede m-b-l">How the market has evolved and what&rsquo;s been learned</p>
 
   {% set items = [
-    { decade: "60s", year: "1964", title: "Industrial training boards introduced", summary: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
-    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
-    { decade: "LAST", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" }
+    { decade: "1960s", year: "1964", title: "Industrial training boards introduced", summary: "lorem" },
+    { decade: "1970s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "", year: "", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "", year: "1973", title: "Jobcentres opened", intro: "lorem" },
+    { decade: "", year: "1975", title: "Recruitment subsidy for school leavers", intro: "lorem" },
+    { decade: "", year: "", title: "Job creation programme", intro: "lorem" },
+    { decade: "", year: "", title: "Temporary employment subsidy", intro: "lorem" },
+    { decade: "", year: "1976", title: "Youth employment subsidy", intro: "lorem" },
+    { decade: "", year: "", title: "Work experience programme", intro: "lorem" },
+    { decade: "", year: "", title: "Unified vocational preparation", intro: "lorem" },
+    { decade: "", year: "1977", title: "Small firms subsidy", intro: "lorem" },
+    { decade: "", year: "", title: "Job release scheme", intro: "lorem" },
+    { decade: "", year: "1978", title: "Short-time working compensation scheme for textile, clothing and footwear firms", intro: "lorem" },
+    { decade: "", year: "", title: "Special temporary programme", intro: "lorem" },
+    { decade: "", year: "", title: "Youth opportunities scheme", intro: "lorem" },
+    { decade: "", year: "1979", title: "Temporary short-time workers compensation scheme", intro: "lorem" },
+    { decade: "", year: "", title: "Special temporary programme", intro: "lorem" },
+    { decade: "", year: "", title: "Youth opportunities scheme", intro: "lorem" },
+    { decade: "1980s", year: "1981", title: "Community enterprise programme", intro: "lorem" },
+    { decade: "", year: "1982", title: "Community programme", intro: "lorem" },
+    { decade: "", year: "", title: "Voluntary projects programme", intro: "lorem" },
+    { decade: "", year: "", title: "Young workers scheme", intro: "lorem" },
+    { decade: "", year: "1983", title: "Youth training scheme", intro: "lorem" },
+    { decade: "", year: "", title: "Enterprise allowance scheme", intro: "lorem" },
+    { decade: "", year: "", title: "Job splitting scheme (renamed Jobshare)", intro: "lorem" },
+    { decade: "", year: "1986", title: "Two year YTS", intro: "lorem" },
+    { decade: "", year: "", title: "Career development loans", intro: "lorem" },
+    { decade: "", year: "", title: "Restart courses", intro: "lorem" },
+    { decade: "", year: "", title: "Jobstart", intro: "lorem" },
+    { decade: "", year: "", title: "New works scheme", intro: "lorem" },
+    { decade: "", year: "1987", title: "Jobshare", intro: "lorem" },
+    { decade: "", year: "", title: "New job training scheme", intro: "lorem" },
+    { decade: "", year: "1988", title: "Employment training", intro: "lorem" },
+    { decade: "", year: "1989", title: "Work trials", intro: "lorem" },
+    { decade: "", year: "", title: "Job interview guarantee", intro: "lorem" },
+    { decade: "1990s", year: "1990", title: "Youth training", intro: "lorem" },
+    { decade: "", year: "1991", title: "Business start up", intro: "lorem" },
+    { decade: "", year: "", title: "Employment action", intro: "lorem" },
+    { decade: "", year: "", title: "Job search seminars", intro: "lorem" },
+    { decade: "", year: "", title: "Job review workshops", intro: "lorem" },
+    { decade: "", year: "1993", title: "Learning for work", intro: "lorem" },
+    { decade: "", year: "", title: "Community action", intro: "lorem" },
+    { decade: "", year: "", title: "Training for work", intro: "lorem" },
+    { decade: "", year: "1994", title: "Access to work", intro: "lorem" },
+    { decade: "", year: "", title: "Jobfinders grant", intro: "lorem" },
+    { decade: "", year: "", title: "1-2", intro: "lorem" },
+    { decade: "", year: "", title: "Workwise", intro: "lorem" },
+    { decade: "2000s", year: "2000", title: "New deal 50 plus", intro: "lorem" },
+    { decade: "", year: "2001", title: "New deal for disabled people", intro: "lorem" },
+    { decade: "", year: "", title: "Jobcentre plus", intro: "lorem" },
+    { decade: "", year: "2003", title: "Pathways to work", intro: "lorem" },
+    { decade: "", year: "2008", title: "Lone parent obligations", intro: "lorem" },
+    { decade: "", year: "2009", title: "Future jobs fund", intro: "lorem" },
+    { decade: "", year: "", title: "Six month offer", intro: "lorem" },
+    { decade: "", year: "", title: "Flexible new deal", intro: "lorem" },
+    { decade: "", year: "2011", title: "Work programme", intro: "lorem" },
+    { decade: "", year: "", title: "Get Britain working", intro: "lorem" },
+    { decade: "", year: "", title: "Mandatory programmes", intro: "lorem" },
+    { decade: "", year: "2012", title: "Youth contract", intro: "lorem" },
+    { decade: "", year: "2013", title: "Universal credit", intro: "lorem" },
+    { decade: "", year: "", title: "Traineeships", intro: "lorem" },
+    { decade: "", year: "", title: "Post work programme support", intro: "lorem" }
     ]
   %}
 
-  <ul class="list list-bullet">
+  <div class="timeline">
+
   {% for item in items %}
-    <li>
-      <h3 class="heading-small">{{ item.title }}</h3>
-      <p>{{ item.intro }}</p>   
-    </li>
+
+    {% if item.decade %}
+      <h2 class="heading-large">{{ item.decade }}</h2>
+    {% endif %}
+
+    {% if item.year %}
+      <h3 class="heading-medium"><span class="line"></span>{{ item.year }}</h3>
+    {% endif %}
+
+    <div class="timeline-event">
+      <h4 class="heading-small">{{ item.title }}</h4>
+      <p>These supported training in their respective industries, mostly through apprenticeships, and had the power to raise a levy from employers. These started in 196, initially with 13 boards, rising to 23. In 1980, 15 of these boards were abolished.</p>
+      <details>
+        <summary class="m-t-m"><span class="summary">Related research and findings</span></summary>
+        <div>
+          <ul class="list list-bullet">
+            <li><a href="#">Link to a resource</a></li>
+            <li><a href="#">Link to another resource</a></li>
+            <li><a href="#">Link to a resource</a></li>
+            <li><a href="#">Link to another resource</a></li>
+          </ul>
+        </div>
+      </details>
+    </div>{# /timeline-event #}
   {% endfor %}
-  </ul>
+  <div class="clear"></div>
+  </div>{# /timeline #}
 
 </main>
 
