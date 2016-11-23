@@ -20,47 +20,44 @@
   <h1 class="heading-xlarge" class="m-b-s">A history of the labour market</h1>
   <p class="lede m-b-l">How the market has evolved and what&rsquo;s been learned</p>
 
-{#   {% var items = [{ title: "foo", id: 1 }, { title: "bar", id: 2}]; %}
-
-  <h1>Posts</h1>
-  <ul>
-  {% for item in items %}
-    <li>{{ item.title }}</li>
-  {% else %}
-    <li>This would display if the 'item' collection were empty</li>
-  {% endfor %}
-  </ul> #}
-
-
-{#    {{ food = "cheese" }}
-
-   {% set food = "cheese" %} #}
-
-{#    {{ food }} #}
-
-{#    {% set food = "cheese" %} #}
-
-{#   {% set food = 
-    'ketchup': '5 tbsp',
-    'mustard': '1 tbsp',
-    'pickle': '0 tbsp'
- %}
- #}
-{#  {% set food: {
-    'ketchup': '5 tbsp',
-    'mustard': '1 tbsp',
-    'pickle': '0 tbsp' }%}
-
-  {% for ingredient, amount in food %}
-    Use {{ amount }} of {{ ingredient }}
-  {% endfor %} #}
+  {% set items = [
+    { decade: "60s", year: "1964", title: "Industrial training boards introduced", summary: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "70s", year: "1971", title: "Community industry began", intro: "lorem" },
+    { decade: "70s", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" },
+    { decade: "LAST", year: "1973", title: "Training opportunities scheme started (TOPS)", intro: "lorem" }
+    ]
+  %}
 
   <ul class="list list-bullet">
-{% for href, caption in [('index.html', 'Index'), ('about.html', 'About'),
-                         ('downloads.html', 'Downloads')] %}
-    <li><a href="{{ href }}">{{ caption }}</a></li>
-{% endfor %}
-</ul>
+  {% for item in items %}
+    <li>
+      <h3 class="heading-small">{{ item.title }}</h3>
+      <p>{{ item.intro }}</p>   
+    </li>
+  {% endfor %}
+  </ul>
 
 </main>
 
