@@ -47,6 +47,16 @@
   @include phase-banner(beta);
 }
 
+a:visited {
+  color: $link-colour;
+  // color: $text-colour !important;
+  &:hover {
+    color: $link-hover-colour;
+  }
+}
+
+
+
 //////////////////////////////////////
 // CUSTOM STYLES START HERE
 //////////////////////////////////////
@@ -582,19 +592,19 @@ table {
 .longform {
   @include media(tablet) {
     float: right;
-  position: relative;
-  // background-color: red;
-  .number {
-    display: block;
-    position: absolute;
+    position: relative;
     // background-color: red;
-    left: -32%;
-    margin-top: -4px;
-    // width: 2em;
-    @include heading-80;
-    font-weight: bold;
-    // text-align: right;
-  }
+    .number {
+      display: block;
+      position: absolute;
+      // background-color: red;
+      left: -32%;
+      margin-top: -4px;
+      // width: 2em;
+      @include heading-80;
+      font-weight: bold;
+      // text-align: right;
+    }
   }
   
 }
@@ -755,7 +765,49 @@ dl.sources {
   margin-top: -15px;
 }
 
+.heading-xlarge + .lede {
+  // background-color: red;
+}
+
 h1 + .lede {
   margin-top: -1em;
 }
 
+.list-double {
+  @include media(tablet) {
+    column-count: 2;
+  }
+}
+
+.no-underline a {
+  text-decoration: none;
+}
+
+.large-numbers {
+  li {
+    margin-bottom: 1.2em;
+    float: left;
+    margin-right: 10%;
+    @include media(tablet) {
+      float: none;
+      margin-top: 23px;
+      padding-left: 120px;
+    }
+  }
+  strong {
+    @include heading-48;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 0.8!important;
+    // width: 50%;
+    @include media(tablet) {
+      line-height: 0.2!important;
+    }
+  }
+}
+
+img.image {
+  width: 100%;
+  height: auto;
+}

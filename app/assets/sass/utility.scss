@@ -92,6 +92,27 @@
 
 // Positive
 
+.m-t-xxs {
+  margin-top: 5px !important;
+  @include media(tablet) {
+    margin-top: 5px !important;
+  }
+}
+
+.m-t-xs {
+  margin-top: 5px !important;
+  @include media(tablet) {
+    margin-top: 10px !important;
+  }
+}
+
+.m-t-s {
+  margin-top: 12px !important;
+  @include media(tablet) {
+    margin-top: 15px !important;
+  }
+}
+
 .m-t-m {
   margin-top: 15px;
   @include media(tablet) {
